@@ -1,0 +1,37 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "CS 362 Final Project",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open --port 8081",
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:integration": "jest",
+    "test:e2e": "start-test start http://localhost:8081 cy:run"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.7",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
+    "css-loader": "^6.7.4",
+    "cypress": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jsdom": "^22.1.0",
+    "msw": "^1.2.2",
+    "start-server-and-test": "^2.0.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/src/__mocks__/styleMock.js"
+    }
+  }
+}
