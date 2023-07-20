@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promptle</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .info-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .info-description {
+            display: none;
+            text-align: center;
+            margin: 10px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #E5F3FF;
+            border-radius: 8px;
+        }
+        .info-description.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promptle</h1>
+    <button class="info-button" onclick="showInfo()">Info</button>
+    <button onclick="goToMainPage()">Play</button>
+
+    <div id="infoDescription" class="info-description">
+        <p>Promptle is a word guessing game where you need to guess the words in a hidden ChatGPT prompt based off of the ChatGPT response from that prompt. Enter your guesses word by word in the textbox and click "Guess" to submit each word. Your goal is to reveal all the words in the prompt. Good luck!</p>
+    </div>
+
+    <script>
+        function goToMainPage() {
+            window.location.href = "/main";
+        }
+
+        function showInfo() {
+            const infoDescription = document.getElementById("infoDescription");
+            infoDescription.classList.toggle("visible");
+        }
+    </script>
+</body>
+</html>

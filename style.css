@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.prompt, .response {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.user-input {
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.hidden-word {
+    background-color: black;
+    color: black;
+    padding: 5px;
+}
+

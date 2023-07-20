@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promptle - Guess the Prompt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <button onclick="goToStartPage()">Back to Start</button>
+    </div>
+
+    <div class="section prompt">
+        <h2>Hidden Prompt:</h2>
+        <div id="promptBox">
+            <!-- TBD -->
+        </div>
+    </div>
+
+    <div class="section response">
+        <h2>ChatGPT Response:</h2>
+        <p id="responseText">
+            Tread from yesteryears,
+            <br>
+            Loafers tell a timeless tale,
+            <br>
+            Sole-stitched past prevails.
+        </p>
+    </div>
+
+    <div class="section user-input">
+        <input type="text" id="guessInput" placeholder="Guess a word">
+        <button onclick="handleGuess()">Guess</button>
+    </div>
+
+    <script src="./game.js"></script>
+    <script>
+        function goToStartPage() {
+            window.location.href = "/";
+        }
+
+        function handleGuess() {
+            const guess = guessInput.value.trim();
+            console.log("Debug statement: Guess is", guess);
+            guessInput.value = "";
+        }
+    </script>
+</body>
+</html>
