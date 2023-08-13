@@ -40,9 +40,33 @@
 
         function handleGuess() {
             const guess = guessInput.value.trim();
-            console.log("Debug statement: Guess is", guess);
             guessInput.value = "";
+            console.log("Debug statement: Guess is", guess);
+
+            const promptArray = ["Write", "me", "a", "haiku", "about", "loafers."]; // Example prompt array
+            const requestBody = {
+                prompt: promptArray,
+                user_guess: guess
+            };
+
+            fetch('http://flip2.engr.oregonstate.edu:42067/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Indexes of matching words:", data.indexes);
+                // Do something with the indexes, update the UI, etc.
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
         }
+
+
     </script>
 </body>
 </html>

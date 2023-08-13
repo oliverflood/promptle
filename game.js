@@ -36,3 +36,4 @@ function showInfo() {
     const infoDescription = document.getElementById("infoDescription");
     infoDescription.classList.toggle("visible");
 }
+
